@@ -1,0 +1,258 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Reset finnished */
+
+html {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: rgb(65, 65, 206);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.panel {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 25px;
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* image also moving to center because it belongs to div and can move horizontally  */
+    text-transform: uppercase;
+}
+
+.pricing-plan {
+    border-bottom: 1px solid rgb(237, 229, 229);
+}
+
+.pricing-plan:last-child {
+    border-bottom: none;
+}
+
+.pricing-img {
+    margin-bottom: 25px;
+    max-width: 100%;
+    /* Takes max-width of its pricing-plan container, parent */
+}
+
+.pricing-header {
+    color: #888;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.pricing-features {
+    margin: 50px 0 25px;
+    /* top horizontal bottom */
+    color: rgb(81, 81, 156);
+}
+
+.pricing-features-item {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 15px 0;
+    border-top: 1px solid rgb(237, 229, 229);
+}
+
+.pricing-features-item:nth-child(2) {
+    border-bottom: 1px solid rgb(237, 229, 229);
+}
+
+.pricing-price {
+    text-transform: uppercase;
+    color: rgb(81, 81, 156);
+    font-weight: 800;
+    font-size: 1.5em;
+    /* 1.5 times the font-size of the parent */
+    display: block;
+    /* makes the text alone, no other elements horizontally */
+}
+
+.pricing-button {
+    border: 1px solid rgb(36, 163, 192);
+    border-radius: 8px;
+    color: rgb(26, 129, 152);
+    display: inline-block;
+    padding: 15px 30px;
+    /* top & bottom, left & right */
+    text-decoration: none;
+    /* do not want to see the line under */
+    margin: 25px 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.pricing-button:hover,
+.pricing-button:focus {
+    background-color: #90e0ef;
+}
+
+.is-featured {
+    background-color: #90e0ef;
+    color: rgb(111, 111, 111);
+}
+
+.is-featured:hover,
+.is-featured:focus {
+    background-color: #48cae4;
+    color: rgb(111, 111, 111);
+}
+
+@media (min-width: 900px) {
+    .panel {
+        flex-direction: row;
+    }
+
+    .pricing-plan {
+        border-bottom: none;
+        border-right: 1px solid rgb(237, 229, 229);
+        padding: 25px 50px;
+        /* to give more space between */
+    }
+
+    .pricing-plan:nth-child(3) {
+        border-right: none;
+    }
+}
