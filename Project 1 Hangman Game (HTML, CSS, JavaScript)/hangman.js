@@ -67,7 +67,7 @@ function updateFaultLettersEl() {
 
     // If the player lost the game
     if (faultLetters.length === 6) {
-        finalMessage.innerText = `Nooo :( You have lost....`;
+        finalMessage.innerText = `Nooo :( You have lost.... The word was: ${selectedWord}`;
         popup.style.display = 'flex'
 
     }
@@ -112,7 +112,7 @@ window.addEventListener('keydown', (e) => {
         }
     }
     else {
-        alert('Please press an english letter')
+        alert('Please press an english letter or press the button')
     }
 })
 
