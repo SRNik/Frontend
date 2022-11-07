@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PPP.css">
+    <title>Ping Pong Points</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!---adding the CSS framework Bulma -->
+
+
+
+
+</head>
+
+<body>
+    <section class="section">
+        <div class="conatiner">
+            <div class="columns is-centered">
+                <!--- need in order to activate the flexbox. Works like the whole container. Have to have is-centered here -->
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="https://play-lh.googleusercontent.com/VYCLlacT-0JBhq6_BTRnDaa2G26Y8riDoqjExZS_Zxxep88s16blAik_tQZedupOTA"
+                                alt="">
+                        </div>
+
+                        <header class="card-header">
+
+                            <p class="card-header-title">
+                                Ping Pong Score Display
+                            </p>
+
+                        </header>
+                        <div class="card-content">
+                            <h1 class="title is-1"> <span id="pl1Display">0</span> to <span id="pl2Display">0</span>
+                            </h1>
+                            <p class="subtitle is-6">
+                                Use the bottons below in order to keep score
+                            </p>
+                        </div>
+
+                        <label for="playlim" class="label is-large is-inline ml-5"> Playing to</label>
+                        <!---Need is-inline to have the label next to the select-->
+                        <div class="select is-rounded mb-3">
+                            <select name="" id="playlim">
+                                <option value="">---Choose the reaching score---</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                            </select>
+                        </div>
+                        <footer class="card-footer">
+                            <button class="button is-primary card-footer-item" id="pl1Button">+1 Player 1</button>
+                            <button class="button is-link card-footer-item" id="pl2Button">+1 Player 2</button>
+                            <button class="button is-warning card-footer-item" id="reload">Reload</button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="PPP.js"></script>
+
+</body>
+
+</html>
