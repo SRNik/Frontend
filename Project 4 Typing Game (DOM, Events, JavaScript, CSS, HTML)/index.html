@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Adding font-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button id="butn-setngs" class="butn-setngs">
+        <i class="fas fa-cog"></i> <!-- Just adding icon-->
+    </button>
+
+    <div id="setngs" class="setngs">
+        <form id="form-setngs">
+            <div>
+                <label for="diffclty">Difficulty</label>
+                <select id="diffclty">
+                    <!-- Input tag does not have dropdown, hence the reason using this-->
+                    <option value="easy">Easy</option>
+                    <option value="mediocre">Mediocre</option>
+                    <option value="hard">Difficult</option>
+                </select>
+            </div>
+        </form>
+    </div>
+
+    <br>
+    <div id="info-box1" class="info-box1">
+        <h1><i class="fa-sharp fa-solid fa-desktop"></i> Zorro Type <i class="fa-sharp fa-solid fa-desktop"></i> </h1>
+        <!-- Adding icon-->
+
+
+        <p class="time-box">
+            Time left: <span id="seconds">12</span>s
+        </p>
+        <p class="score-box">
+            Score: <span id="score">0</span>
+        </p>
+
+        <p id="prg">Type the following word <i class="fa-sharp fa-solid fa-glasses"></i></p>
+
+        <h2 id="word"></h2>
+
+        <input type="text" placeholder="What is the word to type?" id="input">
+
+        <div id="end-game-box" class="end-game-box"> </div> <!-- Adding elements here via JS-->
+    </div>
+    <!-- 
+    <br>
+    <div id="info-box2" class="info-box2">
+        <h1>Your time has ran out!</h1>
+        <p>Your final score is <span id="score"> </span></p>
+        <button id="PlayAgain">Play again</button>
+    </div> -->
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
